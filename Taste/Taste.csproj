@@ -20,4 +20,11 @@
     <ProjectReference Include="..\Taste.Models\Taste.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Admin\" />
+    <Folder Include="Pages\Customer\Cart\" />
+    <Folder Include="Pages\Customer\Home\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>
