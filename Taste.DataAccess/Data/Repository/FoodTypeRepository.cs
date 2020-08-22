@@ -13,8 +13,9 @@ namespace Taste.DataAccess.Data.Repository
     {
         private readonly ApplicationDbContext _db;
 
-        public FoodTypeRepository(DbContext db):base(db)
+        public FoodTypeRepository(ApplicationDbContext db):base(db)
         {
+            _db = db;
         }
         public IEnumerable<SelectListItem> GetFoodTypeListForDropDown()
         {
