@@ -31,7 +31,7 @@
                         </li>
                         @if (User.IsInRole(Taste.Utility.SD.ManagerRole))
                         {
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown bg-primary">
                                 <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropDown" data-toggle="dropdown">
                                     Admin
                                 </a>
@@ -49,7 +49,7 @@
                                 var count = HttpcontextAccessor.HttpContext.Session.GetInt32(Taste.Utility.SD.ShoppingCart);
 
                             <li>
-                                <a href="#" class="nav-link text-white-50">
+                                <a asp-page="/Customer/Cart/Index" class="nav-link text-white-50">
                                     <i class="fas fa-shopping-cart"></i>
                                     (@count)
                                 </a>
@@ -59,7 +59,7 @@
                         else
                         {
                             <li>
-                                <a href="#" class="nav-link text-white-50">
+                                <a  asp-page="/Customer/Cart/Index" class="nav-link text-white-50">
                                     <i class="fas fa-shopping-cart"></i>
                                     (0)
                                 </a>
