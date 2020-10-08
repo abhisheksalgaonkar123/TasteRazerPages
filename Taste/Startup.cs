@@ -19,6 +19,7 @@ using Taste.Utility;
 using Microsoft.CodeAnalysis.Options;
 using System.Configuration;
 using Stripe;
+using Microsoft.AspNetCore.Authentication.Facebook;
 
 namespace Taste
 {
@@ -62,6 +63,16 @@ namespace Taste
 
                 options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
 
+            });
+            services.AddAuthentication().AddFacebook(fbOptions =>
+            {
+                fbOptions.AppId = "810625529751981";
+                fbOptions.AppSecret = "fffcbf64c721af687e68592a11b4d598";
+            });
+            services.AddAuthentication().AddMicrosoftAccount(msoptions =>
+            {
+                msoptions.ClientId = "df6c74b2-9f06-4d41-80d5-59683030116a";
+                msoptions.ClientSecret = " X6qTj1pq_3Fm9d~1KT77J~5~pBEQaTfm7m";
             });
         }
 
